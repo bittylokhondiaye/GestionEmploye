@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% form_theme formEmploye 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <h1 align='center'> Mettez les données de Employe</h1>
+    {{ form_start(formEmploye) }}
+
+        <div class="form-group">
+        <label for="">Matricule</label>
+        {{ form_widget(formEmploye.matricule, {'attr' : {'placeholder' : "Matricule de l'employer"}}) }}
+        </div>
+
+        <div class="form-group">
+        <label for="">Nom</label>
+        {{ form_widget(formEmploye.nom_complet, {'attr' : {'placeholder' : "Nom Complet de l'employer"}}) }}
+        </div>
+
+        <div class="form-group">
+        <label for="">Date Naissance</label>
+        {{ form_widget(formEmploye.date_naissance, {'attr' : {'placeholder' : "Date de naissance de l'employer"}}) }}
+        </div>
+
+        <div class="form-group">
+        <label for="">Salaire</label>
+        {{ form_widget(formEmploye.salaire, {'attr' : {'placeholder' : "Salaire de l'employer"}})  }}
+        </div>
+
+        <div class="form-group">
+        <label for="">Salaire</label>
+        {{ form_widget(formEmploye.service, {'attr' : {'placeholder' : "Service de l'employer"}})  }}
+        </div>
+
+        <button type="submit" class="btn btn-succes"> Enregistrer </button>
+
+
+    {{ form_end(formEmploye) }}
+{% endblock %}
